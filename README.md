@@ -18,7 +18,6 @@ Projeto feito com base em um teste elaborado pela Palmsoft para verificar o pote
 
 ```bash
 $ git clone https://github.com/EduardoBrugnago/Teste_Palmsoft
-$ cd letmeask
 ```
 Para concluir:
 ```bash
