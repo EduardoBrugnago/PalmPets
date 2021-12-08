@@ -7,10 +7,10 @@ Projeto feito com base em um teste elaborado pela Palmsoft para verificar o pote
 ## Telas:
 
 <p float="center">
-  <img alt="Mobile" width="350" src="README/img2.jfif" />
-  <img alt="Mobile" width="350" src="README/img4.jfif" />
-  <img alt="Mobile" width="350" src="README/img1.jfif" />
-  <img alt="Mobile" width="350" src="README/img3.jfif" />  
+  <img alt="Mobile" width="350" src="README_IMGS/img2.jfif" />
+  <img alt="Mobile" width="350" src="README_IMGS/img4.jfif" />
+  <img alt="Mobile" width="350" src="README_IMGS/img1.jfif" />
+  <img alt="Mobile" width="350" src="README_IMGS/img3.jfif" />  
 </p>
 
 
