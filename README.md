@@ -11,3 +11,22 @@ Projeto feito com base em um teste foi elaborado pela Palmsoft para verificar o 
   <img alt="Mobile" width="350" src="README/img1.jfif" />
   <img alt="Mobile" width="350" src="README/img3.jfif" />  
 </p>
+
+
+## 🔃Clonar o projeto
+
+```bash
+$ git clone https://github.com/EduardoBrugnago/Teste_Palmsoft
+$ cd letmeask
+```
+Para concluir:
+```bash
+# Instalar as dependencias.
+$ yarn install
+
+# Iniciar o projeto.
+$ yarn start
+
+```
+
+---
