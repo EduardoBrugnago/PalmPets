@@ -27,6 +27,11 @@ $ yarn install
 # Iniciar o projeto.
 $ yarn start
 
+# Iniciar pelo windows.
+$ yarn npx react-native run-android
+              ou
+$ yarn npx react-native run-ios
+
 ```
 
 ---
