@@ -1,4 +1,4 @@
-# Teste_Palmsoft
+# Teste Palmsoft
 
 Projeto feito com base em um teste foi elaborado pela Palmsoft para verificar o potencial dos candidatos a vaga de emprego
 
