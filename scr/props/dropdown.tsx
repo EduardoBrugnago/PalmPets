@@ -25,15 +25,14 @@ export default function Dropdown({categories, onPress}) {
         onPress(indexName);
     }, [indexValue]);
     const DATA = categories;
-    
-    /*setIndexValue(itemIndex); setIndexName(DATA[parseInt(itemValue) - 1].name); handleValues()}*/
+
     return (
         <View style={styles.container}>
             <Picker
                 selectedValue={indexValue}
                 style={styles.selected}
                 onValueChange={(itemValue, itemIndex) => {setIndexValue(itemValue); 
-                    setIndexName(DATA[itemIndex - 1].name);
+                    setIndexName(DATA[itemIndex - 1]);
                     
                 }}
             > 

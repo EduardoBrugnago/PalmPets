@@ -53,7 +53,7 @@ export default function PetList<ListComponentes>({ pet, category, onPress }) {
                     source={{uri:pet.img}}
                 />
             <View style={styles.petContainer}>
-                <Text style={styles.category}>{category}</Text>
+                <Text style={styles.category}>{category.name}</Text>
                 <Text style={styles.petInfo}>{pet.name}</Text>
                 <Text style={styles.petInfo}>{pet.age} anos</Text>
             </View> 

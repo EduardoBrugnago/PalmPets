@@ -5,9 +5,10 @@ interface ModalComponents {
     modalVisible: boolean;
     setModalVisible(value: boolean): void;
     petInfo: Object | any;
+    categoryInfo: Object | null;
  }
 
-export default function ModalPet<ModalComponents>({modalVisible, setModalVisible, petInfo}) {
+export default function ModalPet<ModalComponents>({modalVisible, setModalVisible, petInfo, categoryInfo}) {
 
     const styles = StyleSheet.create({
         modalContainer: {
@@ -29,7 +30,6 @@ export default function ModalPet<ModalComponents>({modalVisible, setModalVisible
         },
 
         modalName: {
-            marginTop: 12,
             fontSize: 20,
             fontWeight: "700",
             color: '#48494d',
@@ -111,6 +111,7 @@ export default function ModalPet<ModalComponents>({modalVisible, setModalVisible
                     <Image style={styles.modalImg} source={{uri:petInfo.img}}/> 
                     <View> 
                         <Text style={styles.modalName}>Nome: {petInfo.name} </Text>
+                        <Text style={styles.modalText}>{categoryInfo.name} </Text>
                         <Text style={styles.modalText}>Idade: {petInfo.age}</Text>
                         <TouchableOpacity style={styles.modalEmailButton}  onPress={() => {}}>
                             <Text style={styles.modalTextButton}>Ver mais fotos</Text>

@@ -42,7 +42,7 @@ const Home: React.FC = () => {
         let response = await api.get('/animals');
 
         if(!response.ok) {
-            throw new Error(`Eerror! status: ${response.status}`);
+            throw new Error(`Error! status: ${response.status}`);
         }
 
         const DATA= await response.data;
@@ -53,7 +53,11 @@ const Home: React.FC = () => {
     //Categorias e pets que aparecem na lista
     
 
-    const [currentList,setCurrentList] = useState(null);
+    const [currentList,setCurrentList] = useState({
+        name: "American Curl",
+        img: "https://cdn.fakercloud.com/avatars/drewbyreese_128.jpg",
+        id: "1"
+    });
     const [modalPet, setModalPet] = useState({});
     const [modalVisible, setModalVisible] = useState(false);
 
@@ -62,7 +66,8 @@ const Home: React.FC = () => {
     );
 
     function handleListUpdate(index) {
-        setCurrentList(index)
+        setCurrentList(index);
+        console.log(currentList);
     }
 
     async function handleModal(petIndex) {
@@ -79,6 +84,7 @@ const Home: React.FC = () => {
                 modalVisible={modalVisible}
                 setModalVisible={setModalVisible}
                 petInfo={modalPet}
+                categoryInfo={currentList}
             />
             <View style={styles.headerContainer}>
                 <Text style={styles.headerTitle}>HOME</Text>
