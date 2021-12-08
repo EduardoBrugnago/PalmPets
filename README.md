@@ -5,6 +5,7 @@ Projeto feito com base em um teste elaborado pela Palmsoft para verificar o pote
 
 
 ### Telas:
+
 <p float="center">
   <img alt="Mobile" width="350" src="README/img2.jfif" />
   <img alt="Mobile" width="350" src="README/img4.jfif" />
