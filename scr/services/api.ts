@@ -1,5 +1,3 @@
-
-import AsyncStorage from 'react-native';
 import { create } from "apisauce";
 
 

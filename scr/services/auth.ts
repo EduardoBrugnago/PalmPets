@@ -3,7 +3,7 @@ interface Response {
   user: {
     email: string;
     name: string;
-  };
+  } | null;
 }
 
 interface FindingEmail {
@@ -41,8 +41,9 @@ const userList = [
   },
 ]
 
-export function signIn(user): Promise<Response> { 
-  const userSignIn = userList.find(item => item.user.email == user.email )
+
+export async function signIn(user): Promise<Response> { 
+  const userSignIn = await userList.find(item => item.user.email == user.email )
 
   if(userSignIn ? true : false) {
     if(user.password == userSignIn.user.password) {
@@ -57,7 +58,13 @@ export function signIn(user): Promise<Response> {
           });
         }, 1000);
       });
-    } 
+    } else {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          resolve(undefined);
+        }, 1000);
+      });
+    }
   }  
 }
 

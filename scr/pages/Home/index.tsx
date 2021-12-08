@@ -7,10 +7,6 @@ import Modal from '../../props/modal';
 
 import api from '../../services/api';
 
-interface responseData {
-    data: Object | null;
-}
-
 const Home: React.FC = () => {
     useEffect(() => {
         getAnimals()
@@ -22,12 +18,13 @@ const Home: React.FC = () => {
             .catch(e => {
             console.log('There has been a problem with your get operation: ' + e.message);
         });
-
         
     }, []);
 
-    const [dataCategories, setDataCategories] = useState<responseData[]>([]);
-    const [dataPet, setDataPet] = useState<responseData[]>([]);
+    const [dataCategories, setDataCategories] = useState<Object>([]);
+    const [dataPet, setDataPet] = useState<Object>([]);
+
+    
 
     async function getCategories() {
         let response = await api.get('/categories');
@@ -36,7 +33,7 @@ const Home: React.FC = () => {
             throw new Error(`Error! status: ${response.status}`);
         }
 
-        const responseData= await response.data;
+        const responseData : Object = await response.data;
 
         setDataCategories(responseData);
     };

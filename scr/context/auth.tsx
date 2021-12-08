@@ -1,5 +1,7 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
+import AsyncStore from '@react-native-community/async-storage';
 import * as auth from '../services/auth';
+import { Alert } from "react-native";
 
 interface AuthContextData {
     signed: boolean;
@@ -15,7 +17,13 @@ export const AuthProvider: React.FC = ({ children }) => {
 
     async function signIn(userSingIn) {
         const response = await auth.signIn(userSingIn);
-        setUser(response.user);
+        console.log(response); 
+
+        if(response !==  undefined) {
+            setUser(response.user);
+        } else { Alert.alert("Não foi possivel logar", "Usuario ou senha não encontrado",
+            [ { text: "OK", onPress: () => console.log("OK Pressed") } ])
+        }  
     }
 
     function signOut() {

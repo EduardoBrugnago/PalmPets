@@ -39,7 +39,7 @@ export default function Dropdown({categories, onPress}) {
             > 
                 <Picker.Item  label='Categorias' value/>
 
-                {DATA.map(item => <Picker.Item  label={item.name} value={item.id} />)}
+                {DATA.map(item => <Picker.Item key={item.id}  label={item.name} value={item.id} />)}
             </Picker>
         </View>    
 
